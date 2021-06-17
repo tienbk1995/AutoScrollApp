@@ -1,0 +1,4 @@
+3c3
+< 	printf("hello world\r\n");
+---
+> 	printf("hello world. my name is Tien\r\n");
