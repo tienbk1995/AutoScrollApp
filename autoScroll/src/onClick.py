@@ -1,4 +1,4 @@
-import win32api, time, threading
+import win32api, time, threading, os
 import configData
 
 #Button key list
@@ -11,16 +11,16 @@ ENTERKEY = 0x0D
 
 def clickDetected(event):
     threadID = threading.current_thread().getName()
-    print (threadID,'Starting\r\n')
+    print (threadID,':Starting\r\n')
     time.sleep(1)
     initPressedButton = win32api.GetKeyState(ENTERKEY)
-    
+
     while configData.eventFlag == False:
         currPressedButton = win32api.GetKeyState(ENTERKEY)
 
         if currPressedButton != initPressedButton:
             initPressedButton = currPressedButton
-            print ('Enter is pressed')
+            print (threadID, ':Enter is pressed\r\n')
             event.set()
 
         time.sleep(2)
