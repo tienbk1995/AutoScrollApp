@@ -6,5 +6,5 @@ def waitForEvent(event):
     if  event.wait():
         configData.eventFlag = True
         configData.isStartedFlag = False
-        event.clear()
+        #event.clear()
         print ("%s : %s" % (threadID, configData.eventFlag))

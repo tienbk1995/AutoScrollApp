@@ -10,8 +10,10 @@ def checkMousePosition(event):
         currPos = pyautogui.position()
         if initPos != currPos:
             initPos = currPos
+            event.set()
             print (threadID, ':Normally operating, do nothing!!')
         else:
             print (threadID, ':Position halt, Starting again')
             configData.eventFlag = False
-        time.sleep(30)
+            event.clear()
+        time.sleep(3)
