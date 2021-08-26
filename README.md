@@ -1,1 +1,1 @@
-This scirpt is to scroll mouse automatically
+This script is to scroll mouse automatically
