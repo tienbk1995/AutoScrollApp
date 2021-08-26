@@ -1,2 +1,1 @@
-# TestGit
-For testing git
+This scirpt is to scroll mouse automatically
